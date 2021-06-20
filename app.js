@@ -7,12 +7,12 @@ const port= process.env.PORT;
 app.use(express.static('public'));
  
 
-app.get('/hola', (req, res) => {
-    res.send('Hello World es su ruta');
-});
+// app.get('/hola', (req, res) => {
+//     res.send('Hello World es su ruta');
+// });
 
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
  
 app.listen(port, () => {
